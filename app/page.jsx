@@ -9,16 +9,15 @@ export default function Home() {
         style={{
           padding: "60px 20px",
           textAlign: "center",
-          backgroundColor: "#0f172a",
-          color: "#ffffff",
+          background: "#0f172a",
+          color: "#ffffff"
         }}
       >
         <h1 style={{ fontSize: "36px", marginBottom: "10px" }}>
           Phoenix Auto Source
         </h1>
-
-        <p style={{ fontSize: "18px", maxWidth: "720px", margin: "0 auto 20px" }}>
-          OEM & quality-tested auto parts supplied directly from our inventory.
+        <p style={{ fontSize: "18px", maxWidth: "700px", margin: "0 auto 20px" }}>
+          OEM & quality-tested used auto parts supplied directly from our inventory.
           <br />
           Fast quotes. Reliable fulfillment. Nationwide US delivery.
         </p>
@@ -26,12 +25,12 @@ export default function Home() {
         <a
           href="#quote"
           style={{
-            padding: "12px 26px",
-            backgroundColor: "#f97316",
+            padding: "12px 24px",
+            background: "#f97316",
             color: "#ffffff",
             textDecoration: "none",
             borderRadius: "4px",
-            fontWeight: "bold",
+            fontSize: "16px"
           }}
         >
           Request a Quote
@@ -39,21 +38,21 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section style={{ padding: "50px 20px", maxWidth: "1000px", margin: "auto" }}>
+      <section style={{ padding: "50px 20px", maxWidth: "1000px", margin: "0 auto" }}>
         <h2>How It Works</h2>
         <ol>
           <li>Submit your auto part requirement</li>
-          <li>We check availability from our inventory</li>
+          <li>Our team checks availability from our inventory</li>
           <li>We confirm pricing and delivery details</li>
           <li>Your part is dispatched quickly and securely</li>
         </ol>
       </section>
 
       {/* WHY US */}
-      <section style={{ padding: "50px 20px", backgroundColor: "#f8fafc" }}>
+      <section style={{ padding: "50px 20px", background: "#f8fafc" }}>
         <h2>Why Phoenix Auto Source</h2>
         <ul>
-          <li>OEM & quality-tested auto parts</li>
+          <li>OEM & quality-tested used auto parts</li>
           <li>Competitive pricing</li>
           <li>Fast response time</li>
           <li>Trusted US fulfillment process</li>
@@ -66,7 +65,7 @@ export default function Home() {
         style={{
           padding: "60px 20px",
           maxWidth: "700px",
-          margin: "0 auto",
+          margin: "0 auto"
         }}
       >
         <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
@@ -83,7 +82,7 @@ export default function Home() {
             name="name"
             placeholder="Full Name"
             required
-            style={{ padding: "10px" }}
+            style={inputStyle}
           />
 
           <input
@@ -91,7 +90,7 @@ export default function Home() {
             name="email"
             placeholder="Email Address"
             required
-            style={{ padding: "10px" }}
+            style={inputStyle}
           />
 
           <input
@@ -99,7 +98,7 @@ export default function Home() {
             name="vehicle"
             placeholder="Vehicle (Year / Make / Model)"
             required
-            style={{ padding: "10px" }}
+            style={inputStyle}
           />
 
           <input
@@ -107,26 +106,25 @@ export default function Home() {
             name="part"
             placeholder="Part Required"
             required
-            style={{ padding: "10px" }}
+            style={inputStyle}
           />
 
           <textarea
             name="message"
             placeholder="Additional details"
             rows="4"
-            style={{ padding: "10px" }}
+            style={inputStyle}
           ></textarea>
 
           <button
             type="submit"
             style={{
               padding: "12px",
-              backgroundColor: "#f97316",
+              background: "#f97316",
               color: "#ffffff",
               border: "none",
               fontSize: "16px",
-              cursor: "pointer",
-              borderRadius: "4px",
+              cursor: "pointer"
             }}
           >
             Request Quote
@@ -139,8 +137,8 @@ export default function Home() {
         style={{
           padding: "20px",
           textAlign: "center",
-          backgroundColor: "#0f172a",
-          color: "#ffffff",
+          background: "#0f172a",
+          color: "#ffffff"
         }}
       >
         © {new Date().getFullYear()} Phoenix Auto Source. All rights reserved.
@@ -149,3 +147,10 @@ export default function Home() {
     </main>
   );
 }
+
+const inputStyle = {
+  width: "100%",
+  padding: "10px",
+  borderRadius: "4px",
+  border: "1px solid #ccc"
+};
