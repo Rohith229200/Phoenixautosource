@@ -5,4 +5,3 @@ export default function Home() {
       <p>Deployment test successful</p>
     </main>
   );
-}
