@@ -56,17 +56,9 @@ export default function Home() {
     Request a Quote
   </h2>
 
-  {submitted ? (
-    <p style={{ textAlign: "center", color: "green", fontSize: "18px" }}>
-      Thank you. Our team will contact you shortly.
-    </p>
-  ) : (
     <form
       action="https://formspree.io/f/mqebajrl"
       method="POST"
-      onSubmit={(e) => {
-  setSubmitted(true);
-}}
       style={{ display: "grid", gap: "12px" }}
     >
       <input
