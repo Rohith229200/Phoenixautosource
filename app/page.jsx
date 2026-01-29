@@ -56,6 +56,70 @@ export default function Home() {
     Request a Quote
   </h2>
 
+  <form
+    action="https://formspree.io/f/mqebajrl"
+    method="POST"
+    style={{ display: "grid", gap: "12px" }}
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Full Name"
+      required
+      style={{ padding: "10px" }}
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      required
+      style={{ padding: "10px" }}
+    />
+
+    <input
+      type="text"
+      name="vehicle"
+      placeholder="Vehicle (Year / Make / Model)"
+      required
+      style={{ padding: "10px" }}
+    />
+
+    <input
+      type="text"
+      name="part"
+      placeholder="Part Required"
+      required
+      style={{ padding: "10px" }}
+    />
+
+    <textarea
+      name="message"
+      placeholder="Additional details"
+      rows="4"
+      style={{ padding: "10px" }}
+    ></textarea>
+
+    <button
+      type="submit"
+      style={{
+        padding: "12px",
+        background: "#f97316",
+        color: "#fff",
+        border: "none",
+        fontSize: "16px",
+        cursor: "pointer"
+      }}
+    >
+      Request Quote
+    </button>
+  </form>
+</section>
+>
+  <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+    Request a Quote
+  </h2>
+
     <form
       action="https://formspree.io/f/mqebajrl"
       method="POST"
