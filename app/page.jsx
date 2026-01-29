@@ -44,31 +44,86 @@ export default function Home() {
       </section>
 
       {/* QUOTE FORM */}
-      <section id="quote" style={{ padding: "60px 20px", maxWidth: "600px", margin: "auto" }}>
-        <h2>Request a Part Quote</h2>
+<section
+  id="quote"
+  style={{
+    padding: "60px 20px",
+    maxWidth: "700px",
+    margin: "0 auto"
+  }}
+>
+  <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+    Request a Quote
+  </h2>
 
-        {submitted ? (
-          <p style={{ color: "green", fontWeight: "bold" }}>
-            Thank you. Your request has been received. Our team will contact you shortly.
-          </p>
-        ) : (
-          <form
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
-            onSubmit={() => setSubmitted(true)}
-          >
-            <input type="text" name="name" placeholder="Full Name" required style={inputStyle} />
-            <input type="email" name="email" placeholder="Email Address" required style={inputStyle} />
-            <input type="text" name="vehicle" placeholder="Vehicle (Year / Make / Model)" required style={inputStyle} />
-            <input type="text" name="part" placeholder="Part Required" required style={inputStyle} />
-            <textarea name="message" placeholder="Additional details (VIN optional)" style={inputStyle} />
+  {submitted ? (
+    <p style={{ textAlign: "center", color: "green", fontSize: "18px" }}>
+      Thank you. Our team will contact you shortly.
+    </p>
+  ) : (
+    <form
+      action="https://formspree.io/f/mqebajrl"
+      method="POST"
+      onSubmit={(e) => {
+  setSubmitted(true);
+}}
+      style={{ display: "grid", gap: "12px" }}
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required
+        style={{ padding: "10px" }}
+      />
 
-            <button type="submit" style={buttonStyle}>
-              Submit Request
-            </button>
-          </form>
-        )}
-      </section>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required
+        style={{ padding: "10px" }}
+      />
+
+      <input
+        type="text"
+        name="vehicle"
+        placeholder="Vehicle (Year / Make / Model)"
+        required
+        style={{ padding: "10px" }}
+      />
+
+      <input
+        type="text"
+        name="part"
+        placeholder="Part Required"
+        required
+        style={{ padding: "10px" }}
+      />
+
+      <textarea
+        name="message"
+        placeholder="Additional details"
+        rows="4"
+        style={{ padding: "10px" }}
+      ></textarea>
+
+      <button
+        type="submit"
+        style={{
+          padding: "12px",
+          background: "#f97316",
+          color: "#fff",
+          border: "none",
+          fontSize: "16px",
+          cursor: "pointer"
+        }}
+      >
+        Request Quote
+      </button>
+    </form>
+  )}
+</section>
 
       {/* FOOTER */}
       <footer style={{ padding: "20px", textAlign: "center", background: "#0f172a", color: "#fff" }}>
